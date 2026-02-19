@@ -255,8 +255,8 @@ Model learns plant species identification well but struggles with disease-specif
 
 [Plant-Disease-Identification](https://github.com/cryoraj/Plant-Disease-Identification/tree/main)\
 ├── [README.md](https://github.com/cryoraj/Plant-Disease-Identification/blob/main/README.md) # This file - project documentation\
-├── [models]()\
-│   └── [best_model_Baseline.h5](https://github.com/cryoraj/Plant-Disease-Identification/blob/main/notebooks/best_model_Baseline.h5)      # Trained baseline model\
+├── [models](https://github.com/cryoraj/Plant-Disease-Identification/tree/main/models)\
+│   └── [best_model_Baseline.h5](https://github.com/cryoraj/Plant-Disease-Identification/blob/main/models/best_model_Baseline.h5)      # Trained baseline model\
 ├── [notebooks](https://github.com/cryoraj/Plant-Disease-Identification/tree/main/notebooks)\
 │   └── [plant_disease_eda_baseline.ipynb](https://github.com/cryoraj/Plant-Disease-Identification/blob/main/notebooks/plant_disease_eda_baseline.ipynb)  # Main analysis notebook with EDA + baseline model\
 ├── [PlantVillageData](https://github.com/cryoraj/Plant-Disease-Identification/tree/main/PlantVillageData)\
