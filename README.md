@@ -1,18 +1,18 @@
-# Plant Disease Classification - Capstone Project
+# <span style="color: #51e2f5;"> Plant Disease Classification - Capstone Project </span>
 
 **Author:** Rangarajan Ramachandran  
 **Course:** Professional Certificate in Machine Learning and Artificial Intelligence  
 **Date:** February 2026  
 
-## Project Overview
+## <span style="color: #9df9ef;">Project Overview </span>
 
 This project investigates the application of convolutional neural networks (CNNs) to classify plant diseases from leaf images. The goal is to develop a baseline machine learning model that can accurately identify common plant diseases and provide a foundation for future improvements in Module 24.
 
-### Research Question
+### <span style="color: #edf756;">Research Question
 
 *"Can a machine learning model using convolutional neural networks accurately classify plant diseases from leaf images with sufficient reliability to support decision-making for home gardeners and small-scale growers?"*
 
-## Dataset
+## <span style="color: #9df9ef;">Dataset </span>
 
 **Source:** PlantVillage Dataset (Available on Kaggle)
 
@@ -47,9 +47,9 @@ This project investigates the application of convolutional neural networks (CNNs
 - Viral diseases (mosaic viruses, leaf curl)
 - Pest damage (spider mites)
 
-## Methodology
+## <span style="color: #9df9ef;">Methodology </span>
 
-### 1. Exploratory Data Analysis (EDA)
+### <span style="color: #edf756;">1. Exploratory Data Analysis (EDA) </span>
 
 Comprehensive analysis of the dataset including:
 - **Class distribution analysis:** Identified severe imbalance (36.2x range) requiring special handling
@@ -66,7 +66,7 @@ Comprehensive analysis of the dataset including:
 4. Dataset captured under controlled laboratory conditions with uniform backgrounds
 5. Plant species representation varies from 18,160 images (Tomato) to 371 images (Raspberry)
 
-### 2. Data Preprocessing
+### <span style="color: #edf756;">2. Data Preprocessing </span>
 
 **Image Preparation:**
 - **Resizing:** All images resized to 224×224 pixels (MobileNetV2 requirement)
@@ -86,7 +86,7 @@ Comprehensive analysis of the dataset including:
 
 **Rationale:** Augmentation increases robustness to real-world image variations (lighting, angle, orientation) while preventing overfitting on the relatively small per-class samples.
 
-### 3. Baseline Model Architecture
+### <span style="color: #edf756;">3. Baseline Model Architecture </span>
 
 **Model:** Transfer Learning with MobileNetV2
 
@@ -117,9 +117,9 @@ Comprehensive analysis of the dataset including:
 - Good accuracy-efficiency trade-off for baseline model
 - Pre-trained weights provide strong feature extraction
 
-## Results
+## <span style="color: #9df9ef;">Results </span>
 
-### Model Performance
+### <span style="color: #edf756;">Model Performance </span>
 
 | Metric | Score |
 |--------|-------|
@@ -138,7 +138,7 @@ Comprehensive analysis of the dataset including:
 - Training Time: ~4-5 hours on Google Colab T4 GPU
 - Model converged with minimal overfitting (train/val gap <2%)
 
-### Performance Analysis
+### <span style="color: #edf756;">Performance Analysis </span>
 
 The baseline MobileNetV2 model achieved **strong performance** (94.46% test accuracy), demonstrating effective transfer learning for plant disease classification. This exceeds typical human non-expert performance and approaches expert-level accuracy for many disease categories.
 
@@ -168,7 +168,7 @@ The baseline MobileNetV2 model achieved **strong performance** (94.46% test accu
 - Smaller class sizes (<500 images)
 - High intra-class variation
 
-### Patterns in Misclassifications
+### <span style="color: #edf756;">Patterns in Misclassifications </span>
 
 Confusion matrix analysis reveals several systematic error patterns:
 
@@ -214,7 +214,7 @@ Confusion matrix analysis reveals several systematic error patterns:
 - **Blight diseases** confused with each other (2 cases)
 - Model struggles with diseases sharing symptom terminology and appearance
 
-### Key Insights from Error Analysis
+### <span style="color: #edf756;">Key Insights from Error Analysis </span>
 
 **Strengths:**
 - ✅ **Strong overall accuracy (94.46%)** demonstrates effective baseline
@@ -236,7 +236,7 @@ Confusion matrix analysis reveals several systematic error patterns:
 - ⚠️ **Class-specific confidence thresholds needed:** Especially for bacterial spot (over-predicted)
 - ⚠️ **Under-represented plants need caution:** Raspberry, Potato have limited training data
 
-## Technologies Used
+## <span style="color: #9df9ef;">Technologies Used </span>
 
 - **Python 3.8+** - Programming language
 - **TensorFlow 2.15** / **Keras** - Deep learning framework
@@ -247,7 +247,7 @@ Confusion matrix analysis reveals several systematic error patterns:
 - **Scikit-learn 1.3** - Data splitting, metrics, preprocessing
 - **PIL (Pillow) 10.0** - Image processing
 
-## Project Structure
+## <span style="color: #9df9ef;">Project Structure </span>
 
 ```
 capstone-project/
@@ -264,35 +264,35 @@ capstone-project/
 
 ```
 
-## Key Findings Summary
+## <span style="color: #9df9ef;">Key Findings Summary </span>
 
-### Dataset Characteristics:
+### <span style="color: #edf756;">Dataset Characteristics: </span>
 - **54,305 images** across **38 disease categories** and **14 plant species**
 - **Highly imbalanced:** 36.2:1 ratio between largest (5,507 images) and smallest class (152 images)
 - **Tomato-dominant:** 33.4% of entire dataset, creating potential model bias
 - **Disease prevalence:** 72.22% diseased vs 27.78% healthy (realistic agricultural scenario)
 - **Uniform format:** All images 256×256 JPEG RGB, captured in controlled conditions
 
-### Baseline Model Results:
+### <span style="color: #edf756;">Baseline Model Results: </span>
 - **94.46% test accuracy** - Strong performance demonstrating effective transfer learning
 - **Training stability:** Minimal overfitting (92.69% train, 93.95% val, 94.46% test)
 - **Macro F1: 0.9258** - Good balanced performance across classes
 - **Weighted F1: 0.9440** - Excellent overall classification considering class sizes
 
-### Performance Patterns:
+### <span style="color: #edf756;">Performance Patterns: </span>
 1. **Excellent on distinctive diseases:** Powdery mildew, chlorosis, leaf blight (F1 > 0.99)
 2. **Struggles with subtle symptoms:** Spider mites (F1: 0.828), early blight (F1: 0.672)
 3. **Tomato diseases most confused:** 80% of top errors involve tomato
 4. **Zero cross-species errors** in top 10 - excellent plant identification
 5. **Class size matters:** Under-represented classes (Potato healthy: 152 images) perform poorly (F1: 0.563)
 
-### Error Analysis:
+### <span style="color: #edf756;">Error Analysis: </span>
 - **65% same-plant errors:** Model identifies plant well but struggles with disease differentiation
 - **Bacterial spot over-predicted:** 57 false positives suggest it's learned as "default" for ambiguous damage
 - **Highest single error:** Corn Gray leaf spot → Northern Leaf Blight (18.2%)
 - **Bidirectional confusions:** Target Spot ↔ Spider mites (32 errors) shows genuine model uncertainty
 
-## Acknowledgments
+## <span style="color: #9df9ef;"> Acknowledgments </span>
 
 - **PlantVillage Project** for providing the open-access dataset
 - **TensorFlow/Keras team** for the deep learning framework
